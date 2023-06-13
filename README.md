@@ -1,4 +1,4 @@
-Traffic Control System
+# Traffic Control System
 
 This repository contains an implementation of a traffic control system using Promela (Process Meta Language). The system models the behavior of traffic lights and handles requests from vehicles and pedestrians at an intersection.
 
