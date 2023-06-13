@@ -18,7 +18,7 @@ The traffic control system implementation includes properties expressed using Li
 To run the traffic control simulation and explore the system behavior, follow these steps:
 1. Install the Spin model checker (http://spinroot.com/spin/Man/README.html) on your machine.
 2. Clone this repository: `git clone https://github.com/your-username/traffic-control-system.git`
-3. Change into the repository directory: `cd traffic-control-system`
+3. Change into the repository directory: `cd Traffic-Lights-Controller-Verification`
 4. Run the simulation using Spin: `spin -run main.pml`
 5. Observe the console output to see the actions and interactions of the traffic controllers, vehicles, and pedestrians.
 6. To check the system properties, you can use Spin's verification capabilities. For example, to check the safety property, use the command: `spin -run -ltl p1 main.pml`, where `p1` is the name of the property.
