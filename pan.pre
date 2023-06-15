@@ -46,12 +46,17 @@ inline fair_check(pointer) {
     fair_array[pointer] = true;
     bool result = true;
     int i;
-    for (i : 0 .. (3 - 1)) {
+    do
+    :: select(i : 0 .. (3 - 1)) ->
         if
-            :: fair_array[i] == false -> printf("Element=%d \n", i); result = false;
-            :: else -> skip;
+        :: (fair_array[i] == false) ->
+            printf("Index of first false element: %d\n", i);
+            result = false;
+        :: else ->
+            skip;
         fi;
-    };
+        i = i + 1;
+    od;
     printf("Result = %d \n", result);
     if
         :: result == true ->
