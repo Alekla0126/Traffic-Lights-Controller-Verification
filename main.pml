@@ -191,17 +191,17 @@ init {
 }
 
 // Safety Property.
-ltl safetyN { [] !((N_LIGHT == GREEN) && ((E_LIGHT == GREEN) || (W_LIGHT == GREEN))) }
+//ltl safetyN { [] !((N_LIGHT == GREEN) && ((E_LIGHT == GREEN) || (W_LIGHT == GREEN))) }
 //ltl safetyE { [] !((E_LIGHT == GREEN) && ((N_LIGHT == GREEN) || (P_LIGHT == GREEN))) }
 //ltl safetyW { [] !((W_LIGHT == GREEN) && ((E_LIGHT == GREEN) || (N_LIGHT == GREEN))) }
 //ltl safetyP { [] !((P_LIGHT == GREEN) && ((E_LIGHT == GREEN) || (W_LIGHT == GREEN))) }
 // Liveness Properties.
-//ltl liveness_1 { [] ((len(N_SENSE) > 0) && (N_LIGHT == RED) -> <> (N_LIGHT == GREEN)) }
-//ltl liveness_2 { [] ((len(E_SENSE) > 0) && (E_LIGHT == RED) -> <> (E_LIGHT == GREEN)) }
-//ltl liveness_3 { [] ((len(W_SENSE) > 0) && (W_LIGHT == RED) -> <> (W_LIGHT == GREEN)) }
-//ltl liveness_4 { [] ((len(P_SENSE) > 0) && (P_LIGHT == RED) -> <> (P_LIGHT == GREEN)) }
+//ltl liveness1 { [] ((len(N_SENSE) > 0) && (N_LIGHT == RED) -> <> (N_LIGHT == GREEN)) }
+//ltl liveness2 { [] ((len(E_SENSE) > 0) && (E_LIGHT == RED) -> <> (E_LIGHT == GREEN)) }
+//ltl liveness3 { [] ((len(W_SENSE) > 0) && (W_LIGHT == RED) -> <> (W_LIGHT == GREEN)) }
+//ltl liveness4 { [] ((len(P_SENSE) > 0) && (P_LIGHT == RED) -> <> (P_LIGHT == GREEN)) }
 // Fairness Properties.
-//ltl fairness_1 { [] <> !((N_LIGHT == GREEN) && N_SENSE[0] == true) }
-//ltl fairness_2 { [] <> !((E_LIGHT == GREEN) && E_SENSE[0] == true) }
-//ltl fairness_3 { [] <> !((W_LIGHT == GREEN) && W_SENSE[0] == true) }
-//ltl fairness_4 { [] <> !((P_LIGHT == GREEN) && P_SENSE[0] == true) }
+//ltl fairness1 { [] <> !((N_LIGHT == GREEN) && N_SENSE[0] == true) }
+ltl fairness2 { [] <> !((E_LIGHT == GREEN) && E_SENSE[0] == true) }
+//ltl fairness3 { [] <> !((W_LIGHT == GREEN) && W_SENSE[0] == true) }
+//ltl fairness4 { [] <> !((P_LIGHT == GREEN) && P_SENSE[0] == true) }
